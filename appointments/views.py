@@ -3,13 +3,13 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import View
 from django.views.generic import ListView
 
-from pet.models import Doctor,Pet_owner
+from pet.models import Vet
 from .models import Appointment
 
 class AppointmentView(View):
     def get(self, request, *args, **kwargs):
         context = {
-            'doctors': Doctor.objects.all()
+            'doctors': Vet.objects.all()
         }
         return render(request, 'appointment/appointments.html',context)
 

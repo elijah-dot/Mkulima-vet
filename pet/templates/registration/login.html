@@ -3,15 +3,20 @@
 {% load bootstrap5 %}
 
 {% block content %}
-<div class="wrapper" style="height: 100px;width: 500px;color: rgb(152, 246, 11);margin-left: 700px;margin-top: 60px;font-size: 21px;">
-    <h2 style="text-align:center;color:rgb(152, 246, 11);font-weight:bold;font-size:34px">Login</h2>
-<form class="login" form action="/accounts/login/" method="post">
-  {% csrf_token %}
-  {% bootstrap_form form%}
-  <button class="btn btn-warning login-button" button type="submit" title="login" >Log In</button>
-  <input type="hidden" name="next" value="{{next}}">
-  <p>Don't have an account? <a class="signup" href="/accounts/register">Sign Up</a></p>
-</form>
-
+<div class="container-fluid" id="auth">
+  <div class="row auth">
+    <div class="col-4"></div>
+    <div class="col-4 login">
+      <h2>Login</h2>
+      <form class="login" form action="/accounts/login/" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form%}
+        <button class="btn btn-outline-dark login-button" button type="submit" title="login" >Continue</button>
+        <input type="hidden" name="next" value="{{next}}">
+        <p class="text-center">Don't have an account? <a class="signup" href="/accounts/register">Sign Up</a></p>
+      </form>
+    </div>
+    <div class="col-4"></div>
+  </div>
 </div>
 {% endblock %}}

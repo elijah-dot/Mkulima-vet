@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static%}
+    <section class="section1">
+        {% include 'navbar.html'   %}
+        <div class="container-fluid p-0">
+            <div class="row" id="vices">
+                <h1>Services</h1>
+            </div>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <div class="lap">
+                        <div class="image" style="width: 110%; height: 125%;">
+                            <img src="{% static 'assets/pet.png'%}" alt="" class="img-fluid">
+                         </div>
+                    </div> 
+                </div>
+                <div class="col-6 whether ">
+                    <div class="para flex">
+                        <p>
+                            Whether it is a pamper day, <br> 
+                            playdate, sleepover, training class <br> 
+                            or veterinary visit, we provide the <br> 
+                            best in pet services with highly trained, <br> 
+                            passionate associates...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 get">
+                    <h3 class="text-left">
+                        Get <span class="con">connected</span> to our <br> 
+                        Vet's to <span class="en">Enjoy</span> world-class <br> 
+                        <span class="ser">Services</span>
+                    </h3>
+                </div>
+                <div class="col-6 bttnser flex">
+                    <button ><a href="book/" style="color:black;"> Book appointment</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section4">
+        <div class="container-fluid">
+            <div class="row some">
+                <h3>Some of our top services include:</h3>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="face front-face" id="profile">
+                            <div class="pt-3 uppe"> 
+                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                <h3 class="text-center">Grooming</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card vaccine">
+                        <div class="face front-face" id="profile">
+                            <div class="pt-3 uppe1"> 
+                                <i class="fa-solid fa-virus-covid"></i>
+                                <h3 class="text-center">Pet Vaccination</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card oral">
+                        <div class="face front-face" id="profile">
+                            <div class="pt-3 uppe2"> 
+                                <i class="fa-solid fa-tooth"></i>
+                                <h3 class="text-center">Pet Oral and Dental Examination</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

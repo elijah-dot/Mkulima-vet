@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body{
+    background: #51785D;
+}
+#contact{
+    background: #51785D;
+    min-width: 100vw !important;
+    min-height: 100vh !important;
+    overflow-x: hidden;
+}
+
+
+input[type=text], input[type=email], textarea {
+    /* width: 100%; */
+    padding: 12px 20px;
+    margin: 8px 0;
+   }
+
+.form{
+    padding-left: 5vw !important;
+}
+
+.form nav a{
+    font-family: 'Pacifico', cursive;
+    font-size: 4.5vw;
+}
+
+.form h1{
+    color: #EDECEA;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3vw;
+    padding: 2vh 0 2vh 0;
+}
+
+.form-label, .form-text{
+    color: #EDECEA;
+    font-size: 1.15vw;
+    font-weight: 500;
+}
+   
+.mb-3 input{
+    background: rgba(217, 217, 217, 0.5);
+    border: 1px solid #EDECEA !important;
+    border-radius: 10px !important;
+    margin-bottom: 1.5vh!important;
+    width: 31.7vw !important;
+    height: 5.4vh;
+}
+
+.mb-3 input::-webkit-input-placeholder, .mb-3 textarea::-webkit-input-placeholder{
+    color: rgba(217, 217, 217, 0.5);
+}
+
+.mb-3 textarea{
+    background: rgba(217, 217, 217, 0.5);
+    border: 1px solid #EDECEA !important;
+    border-radius: 10px !important;
+    margin-bottom: 2.5vh!important;
+    width: 31.7vw !important;
+    height: 20vh;
+}
+
+.input input{
+    background: rgba(237, 236, 234, 0.95) !important;
+    border: 1px solid #EDECEA;
+    border-radius: 10px;
+    width: 11.7vw;
+    height: 6.4vh;
+    color: #000000;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700 !important;
+    font-size: 1.25vw !important;
+}
+
+.top{
+    height: 60vh;
+    background-color: #EDECEA;
+    margin-right: 0 !important;
+    border-radius: 0 0 0 10vw;
+}
+
+.svg{
+    background: url(/static/assets/contact_svg/undraw_voice_interface_re_206s\ 1.svg) no-repeat;
+    min-height: 80% !important;
+    display: block;
+    margin-left: 6vw;
+    margin-top: 4vw;
+}
+
+.bottom{
+    padding-top: 4vh;
+}
+
+.bottom div i{
+    font-size: 1.5vw;
+}
+
+.bottom div ul{
+    list-style: none;
+    font-size: 1.15vw;
+    font-weight: 600;
+}

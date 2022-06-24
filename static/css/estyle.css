@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Style the sidebar - fixed full height */
+.sidebar {
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 16px;
+  }
+  
+  /* Style sidebar links */
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* Style links on mouse-over */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Style the main content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+  }
+  
+  /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  .row.content {height: 550px}
+    
+  /* Set gray background color and 100% height */
+  
+  /* On small screens, set height to 'auto' for the grid */
+  @media screen and (max-width: 767px) {
+    .row.content {height: auto;} 
+  }
+
+  body {
+    background-color: #F5F5F5;;
+  }
+  
+  .vr {
+    border-right:6px #174624;
+    height:30px;
+  }
+  .btn{
+    background-color: #174624;
+  }
+  .navbar .navbar-nav .nav-link {
+    color: black;
+    font-size: 1.2em;
+  }
+  .navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: xx-large;
+  }
+  
+  body, #auth{
+      min-height: 100vh;
+  }
+  
+  /* Registration & Login Page*/
+  .form-label, .form-text{
+      display: none !important;
+  }
+  #auth{
+    height: 100vh !important;
+    width: calc(100%);
+    padding: 0 !important;
+    
+    background: url(/static/assets/register\ \(1\).png) 50% 0 no-repeat fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+  .auth{
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw !important;
+  }
+  
+  
+  .mb-3 input{
+      background: rgba(217, 217, 217, 0.05) !important;
+      border: 1px solid #EDECEA !important;
+      border-radius: 20px !important;
+      margin: 4vh 0 !important;
+      width: 31.7vw !important;
+      height: 5.4vh;
+  }
+  
+  .mb-3 input::-webkit-input-placeholder{
+      color: #EDECEA !important;
+      font-family: 'Nunito', sans-serif;
+  }
+  
+  .login form button{
+      background: rgba(237, 236, 234, 0.95);
+      border: 1px solid #EDECEA;
+      border-radius: 20px;
+      width: 31.7vw;
+      height: 5.4vh;
+      color: #000000;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700 !important;
+      font-size: 1.25vw !important;
+  }
+  
+  .login form p{
+      margin: 4vh 0 !important;
+      color: #EDECEA;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1vw !important;
+  }
+  
+  .login form p a{
+      text-decoration: none;
+      color: #000000;
+      cursor: pointer;
+      font-weight: 700 !important;
+  }
+  
+  .login form p a:hover{
+      font-size: 125%;
+  }
+  
+  .login h2{
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 4vw;
+      font-weight: 700;
+      color: #EDECEA;
+  }
+
+  /* Homepage Styling */
+.lorem h1{
+  font-size: 3.4vw;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 3vh 0 2.5vh 5vw;
+  color: #000000;
+}
+
+.lorem p{
+  font-size: 1.35vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  padding: 3vh 0 2.5vh 5vw;
+  color: #000000;
+}
+
+.buttn{
+  padding: 3vh 0 2.5vh 5vw;
+}
+
+.lorem button{
+    background: #174624;
+    border-radius: 8px;
+    border: none;
+    width: 15.7vw;
+    height: 7.4vh;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700 !important;
+    font-size: 1.25vw !important;
+}
+
+.lorem button a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.stats{
+  display: flex;
+  margin-top: 10vh;
+  margin-left: 5vw;
+  color: #000000;
+}
+
+.pipe{
+  width: 0.5vw;
+  height: 10vh;
+  background: #174624;
+  border-radius: 5px;
+  margin: 0 2vw;
+}
+
+.count{
+  font-size: 3.2vw;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+
+.svgs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navbar Styling */
+
+#navbarSupportedContent ul{
+  margin-left: 12vw !important;
+}
+
+#navbarSupportedContent ul li a{
+  font-size: 1.15vw !important;
+  font-weight: 600;
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif !important;
+  color: #000000;
+  margin-left: 0.25vw !important;
+  margin-right: 0.25vw !important;
+}
+
+.lpnav{
+  font-family: 'Pacifico', cursive;
+  font-size: 3.6vw !important;
+  color: #000000;
+  margin-left: 2vw;
+}
+
+.lpnav:hover{
+  color: #174624;
+}
+
+/* Services Page */
+.section1{
+  height: 45vh;
+  width: 100vw;
+  background: url(/static/assets/Rectangle\ 16.png) 50% 0 no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#vices{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#vices h1{
+  text-align: center;
+  padding-top: 5vh;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700;
+}
+
+.section2{
+  height: 65vh;
+  width: 100vw;
+  background: #EDECEA;
+  padding: 8vh 5vw 5vh 5vw;
+}
+
+.lap{
+  background-color: #174624;
+  width: 58%;
+  height: 90%;
+}
+
+.image{
+  padding: 3.5vh 0 0 3.5vh;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.para p{
+  font-size: 1.5vw;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400;
+  color: #000000;
+  padding-top: 12.5vh;
+  text-align: left;
+}
+
+.section3{
+  background: #174624;
+  height: 35vh;
+  width: 100vw;
+  padding: 10vh 5vw 5vh 5vw;
+}
+
+.get h3{
+  color: #EDECEA;
+  font-size: 2.1vw;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
+}
+
+.con{
+  color: #CCD4C7;
+}
+
+.en{
+  color: #66B77C;
+}
+
+.ser{
+  color: #EDECEA;
+}
+
+.bttnser button{
+  background: #CCD4C7;
+  border-radius: 8px;
+  border: none;
+  width: 15.7vw;
+  height: 7.4vh;
+  color: #000000;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700 !important;
+  font-size: 1.25vw !important;
+}
+
+.bttnser button a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.section4{
+  background: #CCD4C7;
+  padding: 5vh 5vw;
+  min-height: 65vh;
+  width: 100vw;
+}
+.some h3{
+  font-size: 2.1vw;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
+  padding: 2vh 0 5vh 0;
+}
+
+.card{
+  background: #51785D !important;
+  padding: 2vh 2vw;
+  height: 100%;
+  width: 85%;
+}
+
+.uppe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.uppe i{
+  font-size: 10vw;
+  text-align: center;
+  color: #66B77C;
+}
+
+.uppe h3{
+  color: #66B77C;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
+  padding-top: 3vh;
+}
+
+.vaccine{
+  background: #66B77C !important;
+  padding: 2vh 2vw;
+  height: 100%;
+  width: 85%;
+}
+
+.uppe1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.uppe1 i{
+  font-size: 10vw;
+  text-align: center;
+  color: #CCD4C7;
+}
+
+.uppe1 h3{
+  color: #CCD4C7;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
+  padding-top: 3vh;
+}
+
+.oral{
+  background: #818181 !important;
+  padding: 2vh 2vw;
+  height: 100%;
+  width: 85%;
+}
+
+.uppe2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.uppe2 i{
+  font-size: 10vw;
+  text-align: center;
+  color: #174624;
+}
+
+.uppe2 h3{
+  color: #174624;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
+  padding-top: 3vh;
+}
