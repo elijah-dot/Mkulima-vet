@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+                <div class="row">
+            <h4 class="text-center" style ="color:#FF0000"><strong>You have been successfully registered. Check your email for confirmation email</strong></h4>
+        </div>
+        <div class="row">
+            <a href="/"> <i class="fa fa-home fa-2x" aria-hidden="true" style ="color:#FF0000"></i> GO HOME</a>
+        </div>
+    </div>
+    {% endblock %}
+
+    <!--  -->
+    {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    {% endblock %}
+</body>
+
+</html>

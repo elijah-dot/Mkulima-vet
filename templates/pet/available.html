@@ -1,0 +1,29 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% load bootstrap5 %}
+{% block content %}
+
+<h1>Doctors Available:</h1>
+
+<table class="first">
+  <tr>
+{%  for vet in vets %}
+<td class="image">
+  <img style="width:85px; height:85px; border-radius:50%" class="" src={{vet.image.url}} alt={{vet.name}}>
+</td>
+<td class="vet">Dr:
+{{vet.name}}
+</td>
+<td class="vet">
+  
+<button><a class="" href={% url 'booking' vet.id %}> Book </a></button>
+</td>
+
+
+
+  </tr>
+  {% endfor %}
+</table>
+  
+
+{% endblock %}

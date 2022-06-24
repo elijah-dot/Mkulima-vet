@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container-fluid" style="background: #EDECEA; min-height: 100vh;">
+  {% include 'navbar.html' %}
+  <div class="row">
+    <div class="col-5">
+      <div class="lorem">
+        <h1>Lorem exceptur <br>iIpsum ommodi</h1>
+
+        <p>repudiandae velit hic maxime <br>
+          doloremque. Quaerat provident commodi <br> 
+          consectetur veniam similique ad <br>
+          earum omnis ipsum saepe</p>
+        <div class="buttn">
+          <button ><a href="book/"  style="color:white; ;">Book appointment</a></button>
+        </div>
+      </div>
+      <div class="stats">
+        <div>
+          <h1 class="count">75</h1>
+          <p>Clients</p>
+        </div>
+        <div class="pipe"></div>
+        <div>
+          <h1 class="count">10+</h1>
+          <p>Veteneries</p>
+        </div>
+        <div class="pipe"></div>
+        <div>
+          <h1 class="count">99%</h1>
+          <p>Protection</p>
+        </div>
+        <div class="pipe"></div>
+      </div>
+    </div>
+
+    <div class="col-7 svgs">
+      <img src="{% static 'assets/lp_svg/awesome.svg' %}" />
+    </div>
+  </div>
+</div>
+  
+{% endblock %}

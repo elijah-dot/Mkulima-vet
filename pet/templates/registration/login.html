@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load bootstrap5 %}
+
+{% block content %}
+<div class="container-fluid" id="auth">
+  <div class="row auth">
+    <div class="col-4"></div>
+    <div class="col-4 login">
+      <h2>Login</h2>
+      <form class="login" form action="/accounts/login/" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form%}
+        <button class="btn btn-outline-dark login-button" button type="submit" title="login" >Continue</button>
+        <input type="hidden" name="next" value="{{next}}">
+        <p class="text-center">Don't have an account? <a class="signup" href="/accounts/register">Sign Up</a></p>
+      </form>
+    </div>
+    <div class="col-4"></div>
+  </div>
+</div>
+{% endblock %}}

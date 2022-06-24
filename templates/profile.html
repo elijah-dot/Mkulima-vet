@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="../static/css/profile.css">
+<!-- The sidebar -->
+<!-- Navbar top -->
+<div class="navbar-top">
+    <div class="title">
+        <h1>Profile</h1>
+    </div>
+
+    <!-- Navbar -->
+    <ul>
+        <li>
+            <a href="#message">
+                <span class="icon-count">29</span>
+                <i class="fa fa-envelope fa-2x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#notification">
+                <span class="icon-count">59</span>
+                <i class="fa fa-bell fa-2x"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#sign-out">
+                <i class="fa fa-sign-out-alt fa-2x"></i>
+            </a>
+        </li>
+    </ul>
+    <!-- End -->
+</div>
+<!-- End -->
+
+<!-- Sidenav -->
+<div class="sidenav">
+    <div class="profile">
+        <img src="https://imdezcode.files.wordpress.com/2020/02/imdezcode-logo.png" alt="" width="100" height="100">
+
+        <div class="name">
+            {{user.username}}
+        </div>
+        <div class="job">
+            Web Developer
+        </div>
+        <div class="job">
+            {{user.email}}
+            
+        </div>
+        <div class="job">
+            {{user.phone}}
+            
+        </div>
+
+        
+    </div>
+
+    <div class="sidenav-url">
+        <div class="url">
+            <a href="#profile" class="active">Profile</a>
+            <hr align="center">
+        </div>
+        <div class="url">
+            <a href="#settings">Settings</a>
+            <hr align="center">
+        </div>
+    </div>
+</div>
+<!-- End -->
+
+<!-- Main -->
+<div class="main">
+    <h2>IDENTITY</h2>
+    <div class="card">
+        <div class="card-body">
+            <i class="fa fa-pen fa-xs edit"></i>
+            {% for appoint in object_list %}
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Dr</td>
+                        <td>:</td>
+                        <td>{{ appoint.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Time</td>
+                        <td>:</td>
+                        <td>{{ appoint.time }}</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>:</td>
+                        <td>{{ appoint.date }}</td>
+                    </tr>
+                    <!-- <tr>
+                        <td>pet</td>
+                        <td>:</td>
+                        <td>{{ appoint.pet }}</td>
+                    </tr> -->
+                    
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-success" style="font-size:30px ;margin-bottom:50px"><a href="{% url 'appointment' %}">  Book appointment </a></button>
+        </div>
+    </div>
+
+    <h2>SOCIAL MEDIA</h2>
+    <div class="card">
+        <div class="card-body">
+            <i class="fa fa-pen fa-xs edit"></i>
+            <div class="social-media">
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-invision fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-snapchat fa-stack-1x fa-inverse"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End -->
+
+{% endblock %}
+
+

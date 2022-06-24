@@ -1,0 +1,55 @@
+{% load bootstrap5 %}
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg transparent">
+  <div class="container-fluid">
+    <a class="navbar-brand lpnav" href="{% url 'home' %}">Mk. Vet</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}" style="margin-right: 20px;font-size:25px">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'services'%}" style="margin-right: 20px;font-size:25px">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="margin-right: 20px;font-size:25px">Pet Health</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact'%}" style="margin-right: 20px;font-size:25px">Contact Us</a>
+
+        </li>
+        {% if user.is_authenticated %}
+
+
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'available' %}" style="margin-right: 20px;font-size:25px" >Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'logout' %}" style="margin-right: 20px;font-size:25px">Logout</a>
+        </li>
+        {% else %}
+        <li class="nav-item ">
+          <a class="nav-link active" aria-current="page" href="/accounts/login" style="margin-right: 20px;font-size:25px">login</a>
+        </li> 
+      </ul>
+      <form class="d-flex">
+        <button class="btn btn-success" type="submit" ><a href="/accounts/register" style="margin-left:20px ;text-decoration: none;color: aliceblue;">Register</a></button>
+      </form>
+      {% endif %}
+    </div>
+  </div>
+</nav>
+</body>
